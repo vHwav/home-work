@@ -37,21 +37,36 @@ a {
 
 /*상품 페이지*/
 
-section {
-    width: 900px;
-    margin: 0 auto;
-    display: flow-root;
+.section {
+    width: 502px;
 }
 .product {
     background: var(--white);
     border: 1px solid var(--gray-500) ;
-    float: left;
     position: relative;
     text-align: center;
     color: var(--gray-800);
+    box-sizing: border-box;
 }
+
 .product-01 {
-    padding: 14px 23px ;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.product-name {
+    width: 200px;
+    font-size: 2.4rem;
+    font-weight:700;
+    margin-top: 13px;
+}
+
+.product-02, .product-03 {
+    padding: 14px 23px;
+    margin-top: 14px;
+}
+.product-02 {
     float: left;
 }
 .product-logo{
@@ -62,18 +77,9 @@ section {
     margin-top: 10px;
     margin-bottom: 7px;
 }
-.product-02 {
-    padding: 20px 28px;
-    float: left;
-    margin-left: 58px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-.product-name {
-    font-size: 2.4rem;
-    font-weight:700;
-    margin-top: 13px;
+.product-03 {
+    padding: 14px 23px ;
+    float: right;
 }
 
 /*구매하기 버튼*/
@@ -88,12 +94,12 @@ section {
     bottom: 20px;
     left: 20px;
 }
-.buy-btn:hover {
+.buy-btn:hover, .buy-btn:focus {
     background: var(--active-color);
     width: 112px;
     transition: 0.3s;
 }
-.buy-btn:hover .active {
+.buy-btn:hover .active, .buy-btn:focus .active {
     display: block;
     color: var(--white);
     font-size: 1.4rem;
@@ -110,7 +116,7 @@ section {
         opacity: 0;
     }
 }
-.buy-btn:hover .active::after {
+.buy-btn:hover .active::after, .buy-btn:focus .active::after  {
     content: "";
     background: url(./../images/angle-right.png)no-repeat 50% 50% ;
     display: inline-block;
