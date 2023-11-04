@@ -14,5 +14,5 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 ## 1. HTML5 마크업 구조 설계 
 
 <p align="center">
-  <img src="blob:https://imgur.com/219cfd10-3f89-47bb-bd52-4f0da276de39" alt="html 마크업 구조 설명을 위한 그림">
+  <img src="https://imgur.com/219cfd10-3f89-47bb-bd52-4f0da276de39" alt="html 마크업 구조 설명을 위한 그림">
 </p>
