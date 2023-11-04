@@ -14,7 +14,7 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 ## 1. HTML5 마크업 구조 설계 
 
 
-  <img src="./images/01-1.jpg" alt="html 마크업 구조를 위해 큰 틀을 먼저 잡은 그림">
+ [ <img src="[./images/01-1.jpg]https://github.com/vHwav/home-work/assets/148796897/1142e808-d8b9-4887-ae03-bd6e0de023ff)" alt="html 마크업 구조를 위해 큰 틀을 먼저 잡은 그림">](https://github.com/vHwav/home-work/assets/148796897/1142e808-d8b9-4887-ae03-bd6e0de023ff)
 
 
 ```
