@@ -30,7 +30,7 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 ```
 먼저, &lt;section&gt; 태그에 section 클래스로 페이지를 구분합니다 <br>
 
-접근성을 위해 &lt;h2&gt; 태그로 페이지의 제목을 설정합니다. 상품 페이지는 UI 상에서는 보이지 않는 부분임으로 sr-only class를 적용해서 스크린 리더 사용자만 들을 수 있도록 합니다.
+접근성을 위해 &lt;h2&gt; 태그로 페이지의 제목을 설정합니다. 상품 페이지는 UI 상에서는 보이지 않는 부분임으로 sr-only class를 적용해서 스크린 리더 사용자만 들을 수 있도록 합니다. h1태그 대신 h2 태그를 맨 처음 사용한 이유는 현재 과제로 나온 부분은 상품 페이지만이지만 그 위에 header와 logo 영역이 있을 거라 생각하기 때문입니다.
 
 현재 각각의 상품 페이지에는 동일한 background와 border가 적용되어 있습니다. 그것을 편리하게 적용할 수 있도록 동일한 class 인 product를 준 후, 형태에 따라서 product-01과 product-02 클래스를 추가합니다. 저는 product 부분은 float:left, float:right를 쓸 예정이므로 product-03 class를 추가했습니다.
 
