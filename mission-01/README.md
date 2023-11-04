@@ -38,7 +38,7 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 
 큰 틀이 나왔으면 다음 세부 요소를 디자인 합니다
 
-<img src="./images/01-2.jpg" alt="큰 틀을 잡은 후 세부 요소에 들어가는 그림">
+<img src="![01-1](https://github.com/vHwav/home-work/assets/148796897/1142e808-d8b9-4887-ae03-bd6e0de023ff)" alt="큰 틀을 잡은 후 세부 요소에 들어가는 그림">
 
 ```
 <section class="section">
