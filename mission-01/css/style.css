@@ -34,7 +34,10 @@ a {
 .active{
     display: none;
 }
-
+figure {
+    padding: 0;
+    margin: 0;
+}
 /*상품 페이지*/
 
 .section {
