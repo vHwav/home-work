@@ -42,14 +42,14 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 <section class="section">
         <h2 class="sr-only">상품페이지</h2>
         <div class="product product-01">
-            <div class="name-group">
+            <figure class="name-group">
                 <h3 class="product-logo">
                     <img src="./images/logo_otugi.svg" alt="오뚜기" />
                 </h3>
-                <p class="product-name">따듯한 차 향기</p>
-            </div>
+                <figcaption class="product-name">따듯한 차 향기</figcaption>
+            </figure>
             <img src="./images/product_honey.png" alt="꿀 생강차" />
-            <a class="buy-btn" href="/" aria-label="구매하기 버튼">
+            <a class="buy-btn" href="/" aria-label="">
                 <span class="active">구매하기</span>
             </a>
         </div>
@@ -58,7 +58,9 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
                 <img src="./images/logo_kamill.svg" alt="카밀" />
             </h3>
             <h4 class="product-names">핸드크림 모음</h4>
-            <img src="./images/product_handcream.png" alt="카밀 핸드크림" />
+            <figure>
+                <img src="./images/product_handcream.png" alt="카밀 핸드크림" />
+            </figure>
             <a class="buy-btn" href="/" aria-label="구매하기 버튼">
                 <span class="active">구매하기</span>
             </a>
@@ -68,13 +70,15 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
                 <img src="./images/logo_gomgom.svg" alt="곰곰" />
             </h3>
             <h4 class="product-names">고소한 보리차</h4>
-            <img src="./images/product_boricha.png" alt="곰곰 보리차" />
+            <figure>
+                <img src="./images/product_boricha.png" alt="곰곰 보리차" />
+            </figure>
             <a class="buy-btn" href="/" aria-label="구매하기 버튼">
                 <span class="active">구매하기</span>
             </a>
         </div>
-    </section>
 
+    </section>
 ```
 각 상품 페이지에는 로고가 들어가 있습니다. <br>
 제품의 상품 분류를 나타내는 요소임으로 &lt;h3&gt; 태그로 넣은 후 로고 이미지에 접근성을 위해 alt로 어디 회사임을 나타냅니다. <br>
