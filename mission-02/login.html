@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="/login.js " defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-group center">
+            <h1 class="logo">
+                <a href="/">
+                    <img src="./assets/logo_light.svg" alt="이디야" />
+                </a>
+            </h1>
+            <ul class="gnb">
+                <li><a href="/">이디야 디자인</a></li>
+                <li><a href="/" class="now">로그인</a></li>
+                <li><a href="/">회원가입</a></li>
+                <li><a href="/">이디야 음료</a></li>
+                <li><a href="/">이디야 뉴스</a></li>
+                <li><a href="/">매장찾기</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="login">
+        <div class="login-group center">
+            <div class="login-text-group">
+                <h2 class="section-headline">로그인</h2>
+                <p lang="en" class="dialog-headline">Welcome, Ediya Coffee</p>
+                <p class="font-m">이디야 커피에 오신 것을 환영합니다</p>
+            </div>
+            <form action="/" class="login-form" method="get">
+                <fieldset>
+                    <legend class="sr-only">로그인 영역</legend>
+                    <label for="ID">이메일</label>
+                    <div class="valid-group">
+                        <input type="email" id="ID" placeholder="yamoo9@euid.dev" required />
+                        <span class="valid valid-checked"><img src="./assets/checked.svg" alt="아이디 형식 일치" /></span>
+                        <span class="valid valid-invalid"><img src="./assets/invalid.svg" alt="아이디 형식 불일치" /></span>
+                    </div>
+                    <label for="PWD" class="sr-only"></label>
+                    <div class="valid-group">
+                        <input type="password" id="PWD" placeholder="패스워드" minlength="8" required />
+                        <span class="valid valid-checked action"><img src="./assets/checked.svg"
+                                alt="아이디 형식 일치" /></span>
+                        <span class="valid valid-invalid"><img src="./assets/invalid.svg" alt="아이디 형식 불일치" /></span>
+                        <span class="valid valid-visible"><img src="./assets/visible.svg" alt="비밀번호 보임" /></span>
+                        <span class="valid valid-hidden"><img src="./assets/hidden.svg" alt="비밀번호 숨김" /></span>
+                    </div>
+                    <input type="checkbox" id="check-square" />
+                    <label for="check-square">이메일 저장</label>
+
+                </fieldset>
+                <button class="login-btn-style login-btn " type="submit">로그인</button>
+                <a href="/" class="login-btn-style register-go " aria-label="회원가입 페이지로 이동">회원가입</a>
+            </form>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+/*폰트*/
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+body {
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; 
+}
+
+
+/*변수 선언*/
+
+:root{
+    /* Color styles */
+    --primary-blue-1: rgba(36, 56, 141, 1);
+
+    /* Text-size styles */
+    --design-system-section-headline: 36px;
+    --menu----link: 16px;
+    --card----label: 16px;
+    --card----dialog----headline: 18px;
+    --card----dialog----sub-headline: 14px;
+    --card----dialog----description: 16px;
+    --card----dialog----eliment: 13px;
+    --font-m: 12px
+}
+
+/*공통*/
+
+.center {
+    width: 740px;
+    margin: 0 auto;
+}
+
+/*스크린 리더 전용*/
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*폰트 스타일*/
+.section-headline {
+    letter-spacing: -0.72px;
+    font-size: var(--design-system-section-headline);
+    font-weight: 300;
+} 
+
+.dialog-headline {
+    font-size: var(--card----dialog----headline);
+    font-weight: 400;
+    letter-spacing: -0.36px;
+}
+.font-m {
+    font-size: var(--font-m);
+    font-weight: 400;
+    letter-spacing: -0.24px
+}
+
