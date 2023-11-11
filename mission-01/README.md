@@ -13,9 +13,7 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 ***
 ## 1. HTML5 마크업 구조 설계 
 
-
-  <img src="./images/01-1.jpg" alt="html 마크업 구조를 위해 큰 틀을 먼저 잡은 그림">
-
+![01-1](https://github.com/vHwav/home-work/assets/148796897/1142e808-d8b9-4887-ae03-bd6e0de023ff)
 
 ```
 
@@ -32,26 +30,26 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
 ```
 먼저, &lt;section&gt; 태그에 section 클래스로 페이지를 구분합니다 <br>
 
-접근성을 위해 &lt;h2&gt; 태그로 페이지의 제목을 설정합니다. 상품 페이지는 UI 상에서는 보이지 않는 부분임으로 sr-only class를 적용해서 스크린 리더 사용자만 들을 수 있도록 합니다.
+접근성을 위해 &lt;h2&gt; 태그로 페이지의 제목을 설정합니다. 상품 페이지는 UI 상에서는 보이지 않는 부분임으로 sr-only class를 적용해서 스크린 리더 사용자만 들을 수 있도록 합니다. h1태그 대신 h2 태그를 맨 처음 사용한 이유는 현재 과제로 나온 부분은 상품 페이지만이지만 그 위에 header와 logo 영역이 있을 거라 생각하기 때문입니다.
 
 현재 각각의 상품 페이지에는 동일한 background와 border가 적용되어 있습니다. 그것을 편리하게 적용할 수 있도록 동일한 class 인 product를 준 후, 형태에 따라서 product-01과 product-02 클래스를 추가합니다. 저는 product 부분은 float:left, float:right를 쓸 예정이므로 product-03 class를 추가했습니다.
 
 큰 틀이 나왔으면 다음 세부 요소를 디자인 합니다
 
-<img src="./images/01-2.jpg" alt="큰 틀을 잡은 후 세부 요소에 들어가는 그림">
+![01-2](https://github.com/vHwav/home-work/assets/148796897/b8c235f8-635e-4cef-9d6f-9cdfaebe3f0a)
 
 ```
 <section class="section">
         <h2 class="sr-only">상품페이지</h2>
         <div class="product product-01">
-            <div class="name-group">
+            <figure class="name-group">
                 <h3 class="product-logo">
                     <img src="./images/logo_otugi.svg" alt="오뚜기" />
                 </h3>
-                <p class="product-name">따듯한 차 향기</p>
-            </div>
+                <figcaption class="product-name">따듯한 차 향기</figcaption>
+            </figure>
             <img src="./images/product_honey.png" alt="꿀 생강차" />
-            <a class="buy-btn" href="/" aria-label="구매하기 버튼">
+            <a class="buy-btn" href="/" aria-label="">
                 <span class="active">구매하기</span>
             </a>
         </div>
@@ -60,7 +58,9 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
                 <img src="./images/logo_kamill.svg" alt="카밀" />
             </h3>
             <h4 class="product-names">핸드크림 모음</h4>
-            <img src="./images/product_handcream.png" alt="카밀 핸드크림" />
+            <figure>
+                <img src="./images/product_handcream.png" alt="카밀 핸드크림" />
+            </figure>
             <a class="buy-btn" href="/" aria-label="구매하기 버튼">
                 <span class="active">구매하기</span>
             </a>
@@ -70,13 +70,15 @@ CSS의 float, flex, position 기능을 사용해서 구현합니다.
                 <img src="./images/logo_gomgom.svg" alt="곰곰" />
             </h3>
             <h4 class="product-names">고소한 보리차</h4>
-            <img src="./images/product_boricha.png" alt="곰곰 보리차" />
+            <figure>
+                <img src="./images/product_boricha.png" alt="곰곰 보리차" />
+            </figure>
             <a class="buy-btn" href="/" aria-label="구매하기 버튼">
                 <span class="active">구매하기</span>
             </a>
         </div>
-    </section>
 
+    </section>
 ```
 각 상품 페이지에는 로고가 들어가 있습니다. <br>
 제품의 상품 분류를 나타내는 요소임으로 &lt;h3&gt; 태그로 넣은 후 로고 이미지에 접근성을 위해 alt로 어디 회사임을 나타냅니다. <br>
