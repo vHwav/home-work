@@ -7,7 +7,7 @@
     <title>로그인</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/login.css" />
-    <script src="/login.js " defer></script>
+    <script src="./login.js " defer></script>
 </head>
 
 <body>
@@ -41,8 +41,10 @@
                     <label for="ID">이메일</label>
                     <div class="valid-group">
                         <input type="email" id="ID" placeholder="yamoo9@euid.dev" required />
-                        <span class="valid valid-checked"><img src="./assets/checked.svg" alt="아이디 형식 일치" /></span>
-                        <span class="valid valid-invalid"><img src="./assets/invalid.svg" alt="아이디 형식 불일치" /></span>
+                        <span class="valid validID" id="ID-checked"><img src="./assets/checked.svg"
+                                alt="아이디 형식 일치" /></span>
+                        <span class="valid validID" id="ID-invalid"><img src="./assets/invalid.svg"
+                                alt="아이디 형식 불일치" /></span>
                     </div>
                     <label for="PWD" class="sr-only"></label>
                     <div class="valid-group">
