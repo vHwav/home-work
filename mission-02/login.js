@@ -10,13 +10,14 @@
 
     var trueMail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 
+    if(trueMail.test(IDinput) === false ){
+        invalid.classList.add('action')
+    }if(trueMail.test(IDinput) === true){
+        checked.classList.add('action')
+    }
   
     for(var i = 0; i < validID.length; i ++){
-        if(trueMail.test(IDinput) === false ){
-            invalid.classList.add('action')
-        }if(trueMail.test(IDinput) === true){
-            checked.classList.add('action')
-        }
+        
     }
     
 
