@@ -138,16 +138,29 @@ label[for=check-square] {
     font-size: 20px;
     font-weight: 700;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.login-btn-style::after {
-    content: "";
-    background: url(./../assets/arrow_blue.svg)no-repeat 0 0;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
+.login-btn-style svg {
     position: absolute;
-    right: 14px;
-    top: 14px;
+    right: 14px;    
+}
+
+.login-btn-style.invalid {
+    color: var(--accent-amber)  ;
+}
+.login-btn-style.invalid path {
+    fill:  var(--accent-amber);
+}
+.login-btn.invalid {
+    background: rgba(255,255,255,0.8);
+}
+.register-go.invalid {
+    border:1px solid var(--accent-amber);
+}
+.register-go.loading {
+    
 }
 
 .login-btn {
@@ -161,7 +174,6 @@ label[for=check-square] {
 .register-go {
     grid-column: 2/3;
     grid-row: 2/3;
-    display: inline-block;
     text-align: center;
     line-height: 48px;
     border: 1px solid #FEFEFE;

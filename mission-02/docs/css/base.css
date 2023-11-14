@@ -10,6 +10,7 @@ body {
 :root{
     /* Color styles */
     --primary-blue-1: rgba(36, 56, 141, 1);
+    --accent-amber: rgb(177, 171, 157);
 
     /* Text-size styles */
     --design-system-section-headline: 36px;
