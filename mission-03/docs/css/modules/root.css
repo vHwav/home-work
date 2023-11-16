@@ -1,0 +1,64 @@
+:root {
+  /* Color styles */
+  --white: rgba(255, 255, 255, 1);
+  --black: rgba(1, 1, 1, 1);
+  --red--100: rgba(250, 206, 208, 1);
+  --red--200: rgba(245, 157, 161, 1);
+  --red--300: rgba(239, 107, 114, 1);
+  --red--400: rgba(234, 58, 67, 1);
+  --red--500: rgba(229, 9, 20, 1);
+  --red--600: rgba(183, 7, 16, 1);
+  --red--700: rgba(137, 5, 12, 1);
+  --red--800: rgba(92, 4, 8, 1);
+  --red--900: rgba(46, 2, 4, 1);
+  --blue--100: rgba(204, 227, 251, 1);
+  --blue--200: rgba(153, 198, 247, 1);
+  --blue--300: rgba(102, 170, 243, 1);
+  --blue--400: rgba(51, 141, 239, 1);
+  --blue--500: rgba(0, 113, 235, 1);
+  --blue--600: rgba(0, 90, 188, 1);
+  --blue--700: rgba(0, 68, 141, 1);
+  --blue--800: rgba(0, 45, 94, 1);
+  --blue--900: rgba(0, 23, 47, 1);
+  --green--100: rgba(213, 248, 227, 1);
+  --green--200: rgba(172, 242, 200, 1);
+  --green--300: rgba(130, 235, 172, 1);
+  --green--400: rgba(88, 229, 144, 1);
+  --green--500: rgba(46, 222, 117, 1);
+  --green--600: rgba(37, 178, 93, 1);
+  --green--700: rgba(28, 133, 70, 1);
+  --green--800: rgba(19, 89, 47, 1);
+  --green--900: rgba(9, 44, 23, 1);
+  --gray--100: rgba(227, 227, 227, 1);
+  --gray--200: rgba(200, 200, 200, 1);
+  --gray--300: rgba(172, 172, 172, 1);
+  --gray--400: rgba(145, 145, 145, 1);
+  --gray--500: rgba(117, 117, 117, 1);
+  --gray--600: rgba(94, 94, 94, 1);
+  --gray--700: rgba(70, 70, 70, 1);
+  --gray--800: rgba(47, 47, 47, 1);
+  --gray--900: rgba(23, 23, 23, 1);
+  /* Text-size styles */
+  --big-title--mobile: 30px;
+  --big-title--desktop: 60px;
+  --description--bold--mobile: 15px;
+  --description--mobile: 13px;
+  --text--x-small: 12px;
+  --text--small: 14px;
+  --text--normal: 16px;
+  --text--large: 18px;
+  --text--x-large: 20px;
+  --text--x-small-bold: 12px;
+  --text--small-bold: 14px;
+  --text--normal-bold: 16px;
+  --text--large-bold: 18px;
+  --text--x-large-bold: 20px;
+  --title--x-small: 22px;
+  --title--small: 24px;
+  --title--normal: 28px;
+  --title--large: 34px;
+  --title--x-large: 48px;
+  --title--2x-large: 60px;
+}
+
+/*# sourceMappingURL=root.css.map */

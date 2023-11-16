@@ -1,12 +1,10 @@
-// https://piccalil.li/blog/a-modern-css-reset
+
 
 /* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
+body * {
+  box-sizing:border-box;
+}
 /* Remove default margin */
 body,
 h1,
