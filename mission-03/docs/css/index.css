@@ -1,3 +1,84 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.15;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+iframe,
+video {
+  width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 :root {
   /* Color styles */
   --white: rgba(255, 255, 255, 1);
@@ -61,4 +142,272 @@
   --title--2x-large: 60px;
 }
 
-/*# sourceMappingURL=index.css.map */
+body {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.button {
+  border: 0;
+  background: var(--red--500);
+  padding: 8px 20px;
+  color: var(--white);
+}
+.button--rounded {
+  border-radius: 4px;
+}
+.button--arrow {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+.button--right::after {
+  display: inline-block;
+  content: "";
+  background: url(/mission-03/docs/assets/arrow.svg) no-repeat 0 0;
+  width: 22px;
+  height: 15px;
+  margin-left: 10px;
+}
+.button--left::before {
+  display: inline-block;
+  content: "";
+  background: url(/mission-03/docs/assets/arrow.svg) no-repeat 0 0;
+  width: 22px;
+  height: 15px;
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+input {
+  border: 0;
+  padding: 1.25em 1.25em 0.625em 1.25em;
+  background: var(--gray--800);
+  height: 60px;
+  color: var(--white);
+  width: 100%;
+  vertical-align: bottom;
+}
+input:focus + label {
+  top: 10px;
+  color: var(--red--500);
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--red--500);
+}
+.white input {
+  background: var(--white);
+  color: var(--gray--800);
+}
+
+label {
+  position: absolute;
+  top: 1.25em;
+  left: 1.25em;
+  color: var(--white);
+}
+.white label {
+  color: var(--gray--500);
+}
+
+.invalid {
+  display: none;
+}
+
+.invalid--text {
+  display: block;
+  font-size: 14px;
+  color: var(--red--500);
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.header {
+  padding: 40px 10.41vw;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: var(--gradients-100, linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%));
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 6.6vw;
+  }
+}
+
+.header-inner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 140px;
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+}
+
+.lang_sign_container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 24px;
+  align-items: center;
+}
+.lang_sign_container .button--rounded {
+  padding: 12px 20px;
+}
+@media (max-width: 768px) {
+  .lang_sign_container .button--rounded {
+    height: 30px;
+    padding: 6px 13px;
+  }
+}
+
+.lang-wrap {
+  position: relative;
+}
+
+.lang-btn {
+  background: none;
+  color: var(--gray--500);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 10px;
+  border: 1px solid var(--gray--500);
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .lang-btn {
+    height: 30px;
+  }
+}
+
+.lang-group {
+  opacity: 0.9;
+  background: var(--gray--100);
+  color: var(--black);
+  font-weight: 700;
+  padding: 16px 25px 16px 37px;
+  border-radius: 12px;
+  flex-flow: column nowrap;
+  gap: 6px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.lang-group li {
+  position: relative;
+}
+.lang-group .now::before {
+  position: absolute;
+  content: "";
+  background: url(/mission-03/docs/assets/icon_check.svg) no-repeat 0 0;
+  width: 12px;
+  height: 10px;
+  left: -17px;
+  top: 5px;
+}
+.lang-group.is-active {
+  display: flex;
+}
+
+.footer {
+  background: var(--black);
+  color: var(--gray--200);
+  padding: 50px 10.41vw;
+  border-top: 4px solid var(--gray--800);
+}
+
+.footer-inner {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 50px;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01px;
+}
+
+.guide-link {
+  color: var(--gray--300);
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1280px;
+  row-gap: 16px;
+}
+.guide-link li {
+  width: 25%;
+}
+
+.address {
+  color: var(--gray--400);
+}
+.address h2 {
+  margin-bottom: 16px;
+}
+.address span {
+  display: block;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.main {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, #000 100%), url(/mission-03/docs/assets/mian_bg.jpg) no-repeat 0 0/cover, lightgray 0%/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.event-inner {
+  color: var(--white);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 28px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 197px 11.718vw 57px;
+}
+.event-inner > p {
+  font-weight: 700;
+}
+.event-inner > p:nth-of-type(1) {
+  font-size: 20px;
+  letter-spacing: -0.03px;
+  line-height: 1.5;
+}
+
+.font-strong {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-size: clamp(2.83em, 4vw, 3.75em);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03px;
+}
+.font-strong em {
+  font-style: normal;
+}
+
+#form-event {
+  width: 100%;
+}
+#form-event .event-input-group {
+  display: flex;
+}
+#form-event .event-input-group .input-wrap {
+  flex-grow: 1;
+}

@@ -1,0 +1,51 @@
+//버튼 SCSS입니다
+
+
+@mixin mobile-button {
+    @media (max-width:768px){
+        @content;
+    }
+  }
+  
+
+@mixin button {
+    border: 0;
+    background: var(--red--500);
+    padding: 8px 20px;
+    color: var(--white);
+    
+}
+@mixin arrow {
+    display: inline-block;
+    content: "";
+    background:url(/mission-03/docs/assets/arrow.svg)no-repeat 0 0;
+    width: 22px;
+    height: 15px; 
+}
+
+.button {
+    @include button;
+
+
+    &--rounded {
+        border-radius: 4px;
+        
+    }
+    &--arrow{
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px 20px;
+        
+    }
+    &--right::after {
+        @include arrow;
+        margin-left: 10px;
+    }
+    &--left::before {
+        @include arrow;
+        margin-right: 10px;
+        transform: rotate(180deg);
+    }
+
+}
+

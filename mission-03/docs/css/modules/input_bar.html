@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+    <title>input_bar</title>
+    <link rel="stylesheet" href="./../index.css" />
 </head>
 
 <body>
+    <!-- id 입력칸 -->
     <div class="container">
-        <label for="Email">레이블</label>
-        <input type="email" />
+        <div class="input-wrap">
+            <input type="email" required aria-label="이메일 아이디 입력란입니다" />
+            <label for="Email">레이블</label>
+            <span class="invalid">오류 메시지를 출력합니다</span>
+        </div>
+    </div>
+    <!-- pwd 입력칸 -->
+    <div class="container">
+        <div class="input-wrap">
+            <input type="password" required aria-label="비밀번호 입력란입니다" minlength="4" />
+            <label for="Pwd">비밀번호</label>
+            <span class=" invalid">비밀번호는 영문, 숫자 조합 4~60자 사이 값을 입력합니다</span>
+        </div>
     </div>
 </body>
 

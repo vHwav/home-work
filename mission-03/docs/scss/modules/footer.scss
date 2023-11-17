@@ -1,0 +1,41 @@
+//footer scss
+
+.footer {
+    background: var(--black);
+    color: var(--gray--200);
+    padding: 50px 10.41vw;
+    border-top: 4px solid var(--gray--800);
+}
+.footer-inner {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
+}
+.question {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01px;
+}
+
+.guide-link {
+    color: var(--gray--300);
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1280px;
+    row-gap: 16px;
+    & li {
+        width: 25%;
+    }
+}
+
+.address {
+    color: var(--gray--400);
+    & h2 {
+        margin-bottom: 16px;
+    }
+    & span {
+        display: block;
+        line-height: 1.5;
+        font-weight: 700;
+    }
+}

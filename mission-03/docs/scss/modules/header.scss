@@ -1,0 +1,100 @@
+//header scss
+
+
+
+@mixin mobile {
+    @media (max-width:768px){
+        @content;
+    }
+}
+
+.header{
+    padding: 40px 10.41vw;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: var(--gradients-100, linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%));
+
+    @include mobile{
+        padding: 20px 6.6vw;
+    }
+
+}
+.header-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+}
+
+
+.logo {
+    width: 140px;
+    @include mobile(){
+        width: 80px;
+    }
+}
+
+.lang_sign_container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 24px;
+    align-items: center;
+
+    
+
+    & .button--rounded {
+        padding: 12px 20px;
+        @include mobile(){
+            height: 30px;
+            padding: 6px 13px;
+        }
+    }
+}
+.lang-wrap {
+    position: relative;
+}
+.lang-btn {
+    background: none;
+    color: var(--gray--500);
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 10px;
+    border: 1px solid var(--gray--500);
+    border-radius: 2px;
+    @include mobile(){
+     height: 30px;   
+    }
+}
+
+.lang-group {
+    opacity: 0.90;
+    background: var(--gray--100);
+    color: var(--black);
+    font-weight: 700;
+    padding: 16px 25px 16px 37px;
+    border-radius: 12px;
+    flex-flow: column nowrap;
+    gap: 6px;
+    position: absolute;
+    top: 0;
+    display: none;
+
+    & li {
+        position: relative;
+    }
+    & .now::before{
+        position: absolute;
+        content: "";
+        background: url(/mission-03/docs/assets/icon_check.svg)no-repeat 0 0;
+        width: 12px;
+        height: 10px;
+        left: -17px;
+        top: 5px;
+    }
+    &.is-active {
+        display: flex;
+    }
+}

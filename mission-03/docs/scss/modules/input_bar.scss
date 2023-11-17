@@ -1,0 +1,57 @@
+//input_bar입니다
+@use 'sass:math';
+
+.input-wrap {
+    position: relative;
+}
+@mixin input {
+    border: 0;
+    padding: math.div(20,16)+em math.div(20,16)+em math.div(10,16)+em math.div(20,16)+em;
+    background: var(--gray--800);
+    height: 60px;
+    color: var(--white);
+    width: 100%;
+    vertical-align: bottom;
+}
+@mixin label {
+    position: absolute;
+    top: math.div(20, 16)+em;
+    left: math.div(20,16)+em;
+    color: var(--white);
+}
+
+input {
+    @include input;
+    &:focus + label {
+        top: 10px;
+        color: var(--red--500);
+        font-size: 12px;
+        transition: all 0.3s ease-in-out
+    }
+    &:focus {
+        outline: none;
+        border-bottom: 3px solid var(--red--500);
+    }
+    .white &{
+        background: var(--white);
+        color: var(--gray--800)
+    }
+}
+label {
+    @include label; 
+    .white & {
+        color: var(--gray--500);
+    }   
+}
+.invalid {
+    display: none;
+}
+.invalid {
+    &--text {
+        display: block;
+        font-size: 14px;
+        color: var(--red--500);
+        font-weight: 700;
+        margin-top: 5px;
+    }
+}

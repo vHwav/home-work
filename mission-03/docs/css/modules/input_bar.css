@@ -1,3 +1,49 @@
+.input-wrap {
+  position: relative;
+}
 
+input {
+  border: 0;
+  padding: 1.25em 1.25em 0.625em 1.25em;
+  background: var(--gray--800);
+  height: 60px;
+  color: var(--white);
+  width: 100%;
+  vertical-align: bottom;
+}
+input:focus + label {
+  top: 10px;
+  color: var(--red--500);
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--red--500);
+}
+.white input {
+  background: var(--white);
+  color: var(--gray--800);
+}
 
-/*# sourceMappingURL=input_bar.css.map */
+label {
+  position: absolute;
+  top: 1.25em;
+  left: 1.25em;
+  color: var(--white);
+}
+.white label {
+  color: var(--gray--500);
+}
+
+.invalid {
+  display: none;
+}
+
+.invalid--text {
+  display: block;
+  font-size: 14px;
+  color: var(--red--500);
+  font-weight: 700;
+  margin-top: 5px;
+}

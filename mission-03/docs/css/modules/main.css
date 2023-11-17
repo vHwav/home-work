@@ -1,0 +1,47 @@
+.main {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, #000 100%), url(/mission-03/docs/assets/mian_bg.jpg) no-repeat 0 0/cover, lightgray 0%/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.event-inner {
+  color: var(--white);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 28px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 197px 11.718vw 57px;
+}
+.event-inner > p {
+  font-weight: 700;
+}
+.event-inner > p:nth-of-type(1) {
+  font-size: 20px;
+  letter-spacing: -0.03px;
+  line-height: 1.5;
+}
+
+.font-strong {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-size: clamp(2.83em, 4vw, 3.75em);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03px;
+}
+.font-strong em {
+  font-style: normal;
+}
+
+#form-event {
+  width: 100%;
+}
+#form-event .event-input-group {
+  display: flex;
+}
+#form-event .event-input-group .input-wrap {
+  flex-grow: 1;
+}

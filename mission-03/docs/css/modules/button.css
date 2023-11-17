@@ -1,3 +1,31 @@
-
-
-/*# sourceMappingURL=button.css.map */
+.button {
+  border: 0;
+  background: var(--red--500);
+  padding: 8px 20px;
+  color: var(--white);
+}
+.button--rounded {
+  border-radius: 4px;
+}
+.button--arrow {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+.button--right::after {
+  display: inline-block;
+  content: "";
+  background: url(/mission-03/docs/assets/arrow.svg) no-repeat 0 0;
+  width: 22px;
+  height: 15px;
+  margin-left: 10px;
+}
+.button--left::before {
+  display: inline-block;
+  content: "";
+  background: url(/mission-03/docs/assets/arrow.svg) no-repeat 0 0;
+  width: 22px;
+  height: 15px;
+  margin-right: 10px;
+  transform: rotate(180deg);
+}

@@ -61,4 +61,6 @@
   --title--2x-large: 60px;
 }
 
-/*# sourceMappingURL=root.css.map */
+body {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
