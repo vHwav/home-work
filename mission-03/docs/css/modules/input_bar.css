@@ -11,15 +11,31 @@ input {
   width: 100%;
   vertical-align: bottom;
 }
+@media (max-width: 768px) {
+  input {
+    padding: 1.25em;
+    font-size: clamp(12px, 2vw, 16px);
+  }
+}
 input:focus + label {
   top: 10px;
   color: var(--red--500);
   font-size: 12px;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+  input:focus + label {
+    display: none;
+  }
+}
 input:focus {
   outline: none;
   border-bottom: 3px solid var(--red--500);
+}
+@media (max-width: 768px) {
+  input:focus {
+    border: none;
+  }
 }
 .white input {
   background: var(--white);
@@ -31,6 +47,13 @@ label {
   top: 1.25em;
   left: 1.25em;
   color: var(--white);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  label {
+    font-size: 14px;
+    top: 0.875em;
+  }
 }
 .white label {
   color: var(--gray--500);

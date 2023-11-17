@@ -17,6 +17,7 @@
 
     @include mobile{
         padding: 20px 6.6vw;
+        background: var(--gradients-100, linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.50) 100%));
     }
 
 }

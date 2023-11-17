@@ -1,5 +1,12 @@
 //footer scss
 
+@mixin mobile-footer{
+    @media (max-width:768px){
+        @content;
+    }
+}
+
+
 .footer {
     background: var(--black);
     color: var(--gray--200);
@@ -10,6 +17,9 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 50px;
+    @include mobile-footer(){
+        gap: 30px;
+    }
 }
 .question {
     font-size: 20px;
@@ -23,8 +33,15 @@
     flex-flow: row wrap;
     max-width: 1280px;
     row-gap: 16px;
+    @include mobile-footer(){
+        width: 100%;
+    }
     & li {
         width: 25%;
+        @include mobile-footer {
+            width: 50%;
+            font-size: 14px;
+        }
     }
 }
 
@@ -32,10 +49,16 @@
     color: var(--gray--400);
     & h2 {
         margin-bottom: 16px;
+        font-size: 20px;
     }
     & span {
         display: block;
         line-height: 1.5;
         font-weight: 700;
+        word-break: keep-all;
+        @include mobile-footer(){
+            font-size: 14px;
+            font-weight: 400;
+        }
     }
 }

@@ -10,6 +10,11 @@
   flex-flow: column nowrap;
   gap: 50px;
 }
+@media (max-width: 768px) {
+  .footer-inner {
+    gap: 30px;
+  }
+}
 
 .question {
   font-size: 20px;
@@ -24,8 +29,19 @@
   max-width: 1280px;
   row-gap: 16px;
 }
+@media (max-width: 768px) {
+  .guide-link {
+    width: 100%;
+  }
+}
 .guide-link li {
   width: 25%;
+}
+@media (max-width: 768px) {
+  .guide-link li {
+    width: 50%;
+    font-size: 14px;
+  }
 }
 
 .address {
@@ -33,9 +49,17 @@
 }
 .address h2 {
   margin-bottom: 16px;
+  font-size: 20px;
 }
 .address span {
   display: block;
   line-height: 1.5;
   font-weight: 700;
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  .address span {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }

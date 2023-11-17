@@ -1,23 +1,40 @@
 //input_bar입니다
 @use 'sass:math';
 
+@mixin mobile-input {
+    @media (max-width:768px){
+        @content;
+    }
+}
+
 .input-wrap {
     position: relative;
 }
 @mixin input {
     border: 0;
-    padding: math.div(20,16)+em math.div(20,16)+em math.div(10,16)+em math.div(20,16)+em;
+    padding: 1.25em 1.25em 0.625em 1.25em;
     background: var(--gray--800);
     height: 60px;
     color: var(--white);
     width: 100%;
     vertical-align: bottom;
+    @include mobile-input(){
+        padding: 1.25em;
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
 }
 @mixin label {
     position: absolute;
     top: math.div(20, 16)+em;
     left: math.div(20,16)+em;
     color: var(--white);
+    pointer-events: none;
+    @include mobile-input(){
+        font-size: 14px;
+        top: math.div(14, 16)+em;
+
+    }
 }
 
 input {
@@ -26,11 +43,17 @@ input {
         top: 10px;
         color: var(--red--500);
         font-size: 12px;
-        transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out;
+        @include mobile-input(){
+            display: none;
+        }
     }
     &:focus {
         outline: none;
         border-bottom: 3px solid var(--red--500);
+        @include mobile-input(){
+            border: none;
+        }
     }
     .white &{
         background: var(--white);
